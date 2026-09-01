@@ -1,50 +1,36 @@
-# Prerequisites
+# ==========================================
+# 1. C++ Y CMAKE (Tu base optimizada)
+# ==========================================
 *.d
-
-# Compiled Object files
 *.slo
 *.lo
 *.o
 *.obj
-
-# Precompiled Headers
 *.gch
 *.pch
-
-# Linker files
 *.ilk
-
-# Debugger Files
 *.pdb
-
-# Compiled Dynamic libraries
 *.so
 *.dylib
 *.dll
 *.so.*
-
-
-# Fortran module files
 *.mod
 *.smod
-
-# Compiled Static libraries
 *.lai
 *.la
 *.a
 *.lib
-
-# Executables
 *.exe
 *.out
 *.app
 
-# Build directories
+# Directorios de compilación
 build/
 Build/
 build-*/
+out/
 
-# CMake generated files
+# Archivos generados por CMake
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
@@ -52,18 +38,47 @@ Makefile
 install_manifest.txt
 compile_commands.json
 
-# Temporary files
-*.tmp
-*.log
-*.bak
-*.swp
-
-# vcpkg
-vcpkg_installed/
-
-# debug information files
-*.dwo
-
-# test output & cache
+# Caché y dependencias
 Testing/
 .cache/
+vcpkg_installed/
+
+# ==========================================
+# 2. PYTHON Y FLASK (Backend)
+# ==========================================
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Archivos cacheados compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ==========================================
+# 3. BASES DE DATOS Y ARCHIVOS PESADOS (ETL)
+# ==========================================
+*.sqlite
+*.sqlite3
+*.db
+*.csv
+*.xlsx
+
+# ==========================================
+# 4. SEGURIDAD Y CREDENCIALES
+# ==========================================
+.env
+.env.local
+secret*.txt
+
+# ==========================================
+# 5. EDITORES DE CÓDIGO Y SISTEMA OPERATIVO
+# ==========================================
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Windows / Mac
+Thumbs.db
+.DS_Store

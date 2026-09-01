@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: bellidiel123
+      POSTGRES_DB: bellidiel_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data_bellidiel:/var/lib/postgresql/data
+
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_ENV: development
+      DB_HOST: db
+    depends_on:
+      - db
+    volumes:
+      - .:/app  # Sincroniza tus cambios de código en tiempo real
+
+volumes:
+  postgres_data_bellidiel:
