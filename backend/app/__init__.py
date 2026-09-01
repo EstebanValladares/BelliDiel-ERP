@@ -24,4 +24,12 @@ def create_app():
     def status():
         return jsonify({"estado": "Servidor BelliDiel Activo", "base_de_datos": "Conectada"})
 
+    
+
+    @app.route('/api/menu', methods=['GET'])
+    def obtener_menu():
+        from .models import CatalogoMenu
+        productos = CatalogoMenu.query.all()
+        return jsonify([producto.to_dict() for producto in productos])
+
     return app
