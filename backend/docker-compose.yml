@@ -22,7 +22,7 @@ services:
     depends_on:
       - db
     volumes:
-      - .:/app  # Sincroniza tus cambios de código en tiempo real
+      - .:/app  # sincronizacion en tiempo real
 
 volumes:
   postgres_data_bellidiel:
